@@ -14,7 +14,6 @@ class Comments extends React.Component {
         try{
             const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`);
             const json = await response.json();
-            console.log('All the comments are:-', json);
             this.setState({
                 comments: json,
                 error: ''
